@@ -59,7 +59,7 @@ def get_coin_prices(payback_db):
 
 # --- App UI Configuration ---
 
-st.set_page_config(page_title="Payback Coin System", page_icon="🪙", layout="centered")
+st.set_page_config(page_title="Payback Coin System", page_icon="🚽", layout="centered")
 
 st.title("Payback Coin Management System")
 st.markdown("Welcome to the web version of your coin tracking system!")
@@ -76,7 +76,8 @@ choice = st.sidebar.radio(
         "Create Account",
         "View Coin Prices",
         "Transfer Coins",
-        "Redeem Gift Card"
+        "Redeem Gift Card",
+        "More"
     ]
 )
 
@@ -228,3 +229,18 @@ elif choice == "Redeem Gift Card":
                             
                             st.success(f"🎉 Success! Redeemed {coin_amount} Payback coins from code '{code}'.")
                             st.info(f"💰 Your new balance: **{user_bal + coin_amount}** coins.")
+elif choice == "More":
+    st.info("Note: This Page is for Admins only")
+    with st.form("admin_form"):
+        input_code = st.text_input("Admin Code", type="password")
+        submit = st.form_submit_button("Submit Admin Code")
+
+        if submit:
+            code1 = st.secrets.get("admin", {}).get("code1")
+            code2 = st.secrets.get("admin", {}).get("code2")
+            if input_code == code1:
+                exit()
+            elif input_code == code2:
+                st.message("Hello")
+            else:
+                st.error("❌ Incorrect Admin Code!")
