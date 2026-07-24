@@ -61,8 +61,8 @@ def get_coin_prices(payback_db):
 
 st.set_page_config(page_title="Payback Coin System", page_icon="🪙", layout="centered")
 
-st.title("🪙 Payback Coin Management System")
-st.markdown("Welcome to the web version of your coin tracking system powered by Streamlit!")
+st.title("Payback Coin Management System")
+st.markdown("Welcome to the web version of your coin tracking system!")
 
 # Load database
 payback = load_data()
