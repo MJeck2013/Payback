@@ -86,7 +86,7 @@ try:
     st.sidebar.info("Tip: Make sure the system account exists before creating regular accounts!")
     
     # --- Option 1: Check Balance / Login ---
-    if choice == "Check Balance / Login":
+    if choice == "Check Balance/Login":
         st.subheader("🔍 Balance Lookup")
         
         with st.form("login_form"):
