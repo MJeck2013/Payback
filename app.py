@@ -69,7 +69,7 @@ payback = load_data()
 
 # Sidebar Navigation
 st.sidebar.header("Menu Options")
-choice = st.sidebar.radio()
+choice = st.sidebar.radio(
     "Choose an Action:",
     [
         "Check Balance/Login",
