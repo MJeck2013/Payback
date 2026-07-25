@@ -59,7 +59,7 @@ try:
     
     # --- App UI Configuration ---
     
-    st.set_page_config(page_title="Payback Coin System", page_icon="logo.png", layout="centered")
+    st.set_page_config(page_title="Payback Coin System", page_icon="𝐌𝐉𝐞𝐜𝐤", layout="centered")
     
     st.title("Payback Coin Management System")
     st.markdown("Welcome to the web version of your coin tracking system! Made by Mjeck Studios")
