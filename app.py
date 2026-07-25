@@ -247,4 +247,4 @@ elif choice == "Admin Controls":
                 st.error("❌ Incorrect Admin Code!")
 elif choice == "More":
     st.subheader("Click on One of these links to see more by Mjeck Studios")
-    st.markdown("[Click here to visit NoSchool](https://webbrowser-noschool.streamlit.app)")
+    st.markdown("[Click here to visit NoSchool](https://mywebbrowser-noschool.streamlit.app)")
