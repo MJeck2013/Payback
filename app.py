@@ -62,21 +62,22 @@ def get_coin_prices(payback_db):
 st.set_page_config(page_title="Payback Coin System", page_icon="🚽", layout="centered")
 
 st.title("Payback Coin Management System")
-st.markdown("Welcome to the web version of your coin tracking system!")
+st.markdown("Welcome to the web version of your coin tracking system! Made by Mjeck Studios")
 
 # Load database
 payback = load_data()
 
 # Sidebar Navigation
 st.sidebar.header("Menu Options")
-choice = st.sidebar.radio(
+choice = st.sidebar.radio()
     "Choose an Action:",
     [
-        "Check Balance / Login",
+        "Check Balance/Login",
         "Create Account",
         "View Coin Prices",
         "Transfer Coins",
         "Redeem Gift Card",
+        "Admin Controls",
         "More"
     ]
 )
@@ -229,7 +230,7 @@ elif choice == "Redeem Gift Card":
                             
                             st.success(f"🎉 Success! Redeemed {coin_amount} Payback coins from code '{code}'.")
                             st.info(f"💰 Your new balance: **{user_bal + coin_amount}** coins.")
-elif choice == "More":
+elif choice == "Admin Controls":
     st.info("Note: This Page is for Admins only")
     with st.form("admin_form"):
         input_code = st.text_input("Admin Code", type="password")
@@ -244,3 +245,6 @@ elif choice == "More":
                 st.message("Hello")
             else:
                 st.error("❌ Incorrect Admin Code!")
+elif choice == "More":
+    st.subheader("Click on One of these links to see more by Mjeck Studios")
+    st.markdown("[Click here to open Google](https://www.google.com)")
